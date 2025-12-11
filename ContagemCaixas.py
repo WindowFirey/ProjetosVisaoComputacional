@@ -7,7 +7,7 @@ escala = 1.5
 
 Tk().withdraw()  # Oculta a janela principal do tkinter
 
-model = YOLO("C:/Users/Ampla Intelligence/Desktop/pastaTreino/my_model1/train/weights/best.pt")
+model = YOLO("")
 
 BOX_CLASS_ID = 0
 CONF_THRESHOLD = 0.7
@@ -16,7 +16,7 @@ cap = None
 frame = None
 
 if camera:
-    rtsp_url = "rtsp://admin:Ampl@1234@192.168.15.29/cam/realmonitor?channel=1&subtype=1"
+    rtsp_url = ""
     cap = cv2.VideoCapture(rtsp_url, cv2.CAP_FFMPEG)
     assert cap.isOpened(), "Erro ao abrir a câmera RTSP!"
 else:
@@ -80,3 +80,4 @@ if cap is None and frame is not None:
 if cap:
     cap.release()
 cv2.destroyAllWindows()
+
